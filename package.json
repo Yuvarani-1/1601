@@ -1,0 +1,24 @@
+{
+  "name": "1601",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "yuva":"node server.js",
+    "jay": "nodemon server.js"
+  },
+  "author": "Yuvarani",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yuvarani-1/1601.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Yuvarani-1/1601/issues"
+  },
+  "homepage": "https://github.com/Yuvarani-1/1601#readme",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

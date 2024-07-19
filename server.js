@@ -4,8 +4,35 @@ const port = 8081;
 const  toDoList = ["yuva","bhuva","praveen","prabhu"];
 http.createServer((req, res) => {  
     const {method,url} = req;  
-    console.log(method,url)
-    res.end();})
+    //console.log(method,url)
+
+    if(url === "/todos"){
+        if(method === "GET"){
+            res.writeHead(200);
+            res.write(toDoList.toString())
+        }
+
+        else if(method ==="POST"){
+            let body = "";
+            req.on(`error`,(err)=>{
+                console.error(err)
+            }).on(`data`,(chunk)=>{
+                body += chunk;
+                console.log("chunk:",chunk);
+            }).on(`end`,()=>{
+                body = JSON.parse(body)
+                console.log("body:", body)
+            })
+        }
+        else{
+            res.writeHead(501);
+        }
+    }else if(url ==="/"){
+
+    }
+
+    res.end();
+})
     
 .listen(port, () => {  
     console.log(`NodeJs Server is up and running succesfully on port ${port}`)

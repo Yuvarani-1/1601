@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "yuva":"node server.js",
+    "yuva": "node server.js",
     "jay": "nodemon server.js"
   },
   "author": "Yuvarani",
@@ -17,7 +17,7 @@
     "url": "https://github.com/Yuvarani-1/1601/issues"
   },
   "homepage": "https://github.com/Yuvarani-1/1601#readme",
-  "description": "",
+  "description": ">> npm init\r >>nopde server.js\r >>npm start",
   "dependencies": {
     "nodemon": "^3.1.4"
   }

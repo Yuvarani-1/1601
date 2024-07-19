@@ -21,7 +21,9 @@ http.createServer((req, res) => {
                 console.log("chunk:",chunk);
             }).on(`end`,()=>{
                 body = JSON.parse(body)
-                console.log("body:", body)
+                console.log("body:", body);
+                let newToDo = toDoList;
+                newToDo.push(body.item)
             })
         }
         else{
